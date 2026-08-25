@@ -1,0 +1,15 @@
+[Unit]
+Description=Enterprise Travel Agent API
+After=network.target redis-server.service
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/var/www/enterprise-travel-agent
+EnvironmentFile=/var/www/enterprise-travel-agent/server/.env
+ExecStart=/var/www/enterprise-travel-agent/.venv/bin/uvicorn server.main:app --host 127.0.0.1 --port 8000
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

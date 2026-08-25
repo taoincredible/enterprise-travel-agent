@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.venv/
+.venv312/
+__pycache__/
+*.pyc
+server/.env
+data/memory/
+data/rag_knowledge/
+data/models/

@@ -1,0 +1,13 @@
+fastapi
+openai
+python-dotenv
+redis
+uvicorn[standard]
+agentscope==1.0.16
+mcp==1.29.0
+tqdm
+ddgs
+pymilvus[milvus_lite]
+# 轻量服务器使用 CPU 版 torch；固定版本避免最新 transformers 与 CPU torch 不兼容
+sentence-transformers==3.4.1
+transformers==4.46.3
